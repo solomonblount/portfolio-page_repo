@@ -1,0 +1,155 @@
+:root {
+  --navbar-color: #be3144;
+  --gray-blue: #45567d;
+  --welcome-color1: rgb(50,50,50);
+  --welcome-color2: rgb(10,10,10);
+  --project-color1: hsl(290, 80%, 60%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100vw;
+  text-align: center;
+  color: white;
+  background: linear-gradient(90deg, var(--welcome-color1), var(--welcome-color2));
+  margin-top: 100px;
+  padding: 50px;
+}
+
+#welcome * {
+  display: flex;
+  align-items: center;
+}
+
+#welcome-section p {
+  color: var(--navbar-color);
+  font-size: 25px;
+  margin: 10px 0px 0px 0px;
+}
+
+#project-section {
+  margin-top: -20px;
+  color: white;
+  width: 100vw;
+  background-color: var(--project-color1);
+}
+
+#project-section  h2 {
+  padding-top: 30px;
+  text-align: center;
+}
+
+hr {
+  margin: 0 0 60px 0;
+}
+
+#project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  align-items: stretch;   /* makes tiles equal height */
+  width: 100vw;
+}
+
+.project-tile {
+  display: grid;
+  width: 200px;
+  height: 100%;
+  color: white;
+  cursor: pointer;
+}
+
+.project-link {
+  text-decoration: none;
+}
+
+.project-box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin: -5px 0 20px 0;
+  background-color: var(--gray-blue);
+}
+
+.project-box .project-name {
+  margin: auto;
+  color: white;
+  text-decoration: none;
+}
+
+.button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--gray-blue);
+  text-decoration: none;
+  padding-top: 20px;
+  /*
+  margin: 30px 0 50px 237px;
+  */
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100vw;
+  background-color: var(--navbar-color);
+}
+
+#navbar > a {
+  display: flex;
+  align-items: center;
+  margin: 0 50px 0 0;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+#navbar > a:hover {
+  background-color: var(--gray-blue);
+}
+
+#navbar > a {
+  color: white;
+}
+
+@media (min-width: 900px) {
+
+  #project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: stretch;   /* makes tiles equal height */
+    width: 100vw;
+  }
+}
+
+@media (min-width: 1125px) {
+
+  #project-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    align-items: stretch;   /* makes tiles equal height */
+    width: 100vw;
+  }
+}
